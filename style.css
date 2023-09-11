@@ -1,78 +1,91 @@
 .body-container {
+    display:flex;
+    flex-direction: column;
+    flex:1;
     margin: 0;
+    width:100%;
     padding: 0;
 }
 div.column-container {
     display:flex;
     flex-direction: column;
-    height: 2000px;
-    border: 5px solid green;
+    height: 100%;
+    width: 100%;
+    flex: 1;
+   /* border: 5px solid green;*/
     padding: 0;
     margin: 0;
 }
 .navigation-container {
+    text-decoration: none;
     color:white;
     width:100%;
+    min-width:25%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     /*border: 5px solid red;*/
-    flex: 0 1 auto;
+    flex: 1 0 auto;
     justify-content: center;
     align-self:center;
-    align-content:stretch;
-    align-items: center;
-    gap:0;
+    align-content:center;
+    align-items:center;
+    gap:10px;
     margin:0;
     padding:0;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 .content-container {
     /*border: 5px solid blue;*/
     display: flex;
     width: 100%;
     height:auto;
-    min-width:100%;
     flex-direction:row;
-    flex: 1 0 auto;
-    align-content: center;
+    flex:1 0 auto;
+    flex-wrap: wrap;
+    align-content:center;
+    align-items: center;
+    align-self: center;
     justify-content:  center;
     align-self: center;
-    gap: 20px;
+    gap: 10px;
 }
+
 .navigation-container,
 .content-container {
     background-color: darkslateblue;
 }
 .left-content, .right-content {
-    /*border: 5px solid sienna;*/
+   /*border: 5px solid sienna;*/
+    width:300px;
     display: flex;
-    width: 30%;
-    min-width: 30%;
-    height: 50%;
-    flex:0;
-    justify-content: center;
-    align-self:center;
-    align-content: center;
-    gap: 5px;
-    padding: 0;
-    color: white;
-}
-.left-content {
-    justify-content: center;
     flex-direction: column;
+    flex: 0;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    padding: 10%;
+    margin:0;
+    gap:0;
+    color: white;
+
 }
+
 .left-content .left-child-one,
 .left-content .left-child-two,
 .left-content .left-child-three {
-    border: 1px solid purple;
-    flex: 2 0 auto;
+    /*border: 1px solid purple;*/
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    justify-content: center;
+    width: 300px;
 
 }
 .left-content .left-child-one {
-    flex: 5 0 auto;
-    font-size: 22px;
-    padding: 5px
+    flex: 1 0 auto;
+    font-size: 35px;
+    padding: 5px;
 }
 .left-content .left-child-two {
     font-size: 11px;
@@ -80,38 +93,58 @@ div.column-container {
 .left-content .left-child-three {
     justify-content: center;
     align-self: flex-start;
-    padding: 5px 15px;
+    padding: 5px 5px;
 }
 .left-content .left-child-three button {
     color: white;
-    background-color: blue;
-    padding: 10px 20px;
-    font-size:18px;
+    background-color: darkorchid;
+    padding: 0;
+    font-size:16px;
+    width:100px;
+    height:40px;
+    border-radius: 5px;
+}
+.right-content img {
+    width:350px;
+    height:auto;
 }
 .right-content {
     background-color: grey;
+    height:10%;
+    margin: 100px;
+    height:100px;
+    width: auto;
 }
 .content-container-two {
-    border: 5px solid yellow;
+    /*border: 5px solid yellow;*/
     display: flex;
     flex-direction: column;
-    flex: 3 1 0;
+    flex: 1;
     justify-content: space-around;
     align-self: space-around;
-    align-items: center;;
+    align-items: center;
     align-content: space-around;
+    margin:3%;
+}
+.content-title {
+    font-size:30px;
+    font-weight: bold;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
 }
 .quote-container {
    /* border: 5px solid orange;*/
     width:100%;
     display: flex;
     flex-direction: column;
-    flex: 3 0 auto;
+    flex: 1 0 auto;
     align-self: center;
+    align-items:center;
     align-content:center;
     justify-content: center;
-    padding:30px;
-    margin:0;
+    gap: 0;
+    padding: 0;
+    padding-top: 50px;
     background-color: grey;
     color:black;
     font-family:'Courier New', Courier, monospace;
@@ -121,34 +154,43 @@ div.column-container {
 .signature-box{
    /* border: 5px solid bisque;*/
     display: flex;
-    flex: 0;
-    align-content: center;
-    align-self: center;
+    width:50%;
+    align-self:center;
+    align-content:center;
     justify-content: center;
+    flex-direction: column;
+    flex: 0;
     text-align: left;
-    padding: 0 25%;
+    margin:0;
+    padding:25px;
+    gap:10px;
 }
 .quote-box {
     font-size:34px;
     font-style:italic;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    margin-top:50px;
 }
 .signature-box {
     justify-content: flex-end;
-    align-self:flex-end;
-    align-content: flex-end;
+    align-items: flex-end;
     height:auto;
+    margin-bottom: 50px;
 }
 
 .inside-container {
-    height:300px;
-    width: 900px;
-    border: 5px solid pink;
+    height:auto;
+    width: 65%;
+    /*border: 5px solid pink;*/
     display: flex;
     flex-direction: row;
-    flex-basis: 1;
-    flex-grow: 0;
-    gap: 5px;
-    padding: 20px;
+    flex:1 1 0;
+    justify-content: center;
+    gap:50px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 .content-title {
     padding: 20px;
@@ -158,32 +200,62 @@ div.column-container {
 .content-box-three,
 .content-box-four {
     display: flex;
-    width: 250px;
-    flex: 1;
-    justify-content: center;
+    width: 100px;
+    height: 100px;
+    flex: 0 0 1;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-self: center;
+    align-content: center;
     flex-direction: column;
     border:1px solid black;
+    border-radius: 5px;
+    flex-wrap:wrap;
+}
+.box-inside-top,
+.box-inside-bottom {
+    display: flex;
+    width: 75px;
+    height: auto;
+    flex: 0;
+    flex-direction: column;
+    /*border: 6px solid red;*/
+    flex-wrap: wrap;
+}
+.box-inside-bottom {
+    /*border: 2px solid blue;*/
+    padding-top:100px;
+    padding-bottom:50px;
+}
+.box-inside-bottom p {
+    font-size:11px;
+    text-align: center;
+    padding-top:100px; 
+
 }
 .sign-up-container {
     /*border: 5px solid hotpink;*/
     display: flex;
     flex-direction:row;
-    flex: 1 2 0;
+    flex: 1 2 auto;
     justify-content: center;
     align-content:center;
     align-self:center;
     align-items:center;
-    margin:50px;
-    padding:10px 30px;
-    gap:0;
-    background-color: #8f96f3;
+    margin:65px;
+    padding:15px 40px;
+    gap:25px;
+    background-color: darkorchid;
+    border-radius:10px;
+    height:150px;
 }
 .sign-up-message,
 .sign-up-button { /* FOR BOTTOM PAGE SIGN UP MESSAGE */
     /*border:5px solid black;*/
     display:flex;
     width:50%;
-    min-width:20%;
+    min-width:40%;
     max-width:50%;
     height:50px;
     display:flex;
@@ -202,9 +274,10 @@ div.column-container {
 .sign-up-message h3,
 .sign-up-message p {
     display:flex;
-    flex: 1 1 0;
+    flex: 1 0 auto;
     margin:0;
     padding:0;
+    min-height: 10px;
     gap:0;
     align-content:flex-start;
     align-self:flex-start;
@@ -217,29 +290,29 @@ div.column-container {
 .sign-up-button button {
     width: 130px;
     height:30px;
-    align-self:center;
-    background-color: #8f96f3;
+    align-self:flex-end;
+    background-color: darkorchid;
     border:3px solid white;
     color: white;
+    border-radius: 10px;
+    justify-content: center;
+    flex-basis: 1;
 }
 .rightnavbar,
 .leftnavbar {
     flex: 1 1 1;
-    padding: 0px 50px;
-    align-items:flex-start;
-    align-self:flex-start;
-    justify-content: flex-start;
-    align-content: flex-start;
+    padding: 5px 25px;
 }
 .rightnavbar {
     display:flex;
     flex-direction: row;
-    border: 1px solid brown;
+    /*border: 1px solid brown;*/
     justify-content: flex-end;
     align-content: space-between;
     align-self: center;
     text-decoration: none;
     list-style-type: none;
+    gap: 20px;
 }
 .leftnavbar {
     /*border:1px solid brown;*/
@@ -248,7 +321,7 @@ div.column-container {
     justify-content: flex-start;
     align-content: space-between;
     align-self: center;
-    border: 1px solid brown;
+    /*border: 1px solid brown;*/
 }
 .footer-container {
     display:flex;
@@ -259,11 +332,13 @@ div.column-container {
     align-self: center;
     align-content: center;
     align-items: center;
-    margin:0;
-    padding:20px;;
-    gap:0;
+    padding:30px 0px;
     /*border: 3px solid purple;*/
-    background-color: #17507d;
+    background-color: darkslateblue;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: white;
 }
